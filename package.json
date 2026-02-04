@@ -7,12 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "echo \"dev will be added after apps are bootstrapped\"",
     "lint": "echo \"lint will be added after apps are bootstrapped\"",
-    "format": "echo \"format will be added after prettier is added\"",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
     "typecheck": "echo \"typecheck will be added after apps are bootstrapped\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.28.2",
-  "workspaces": ["apps/*", "libs/*"]
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
 }
